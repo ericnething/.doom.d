@@ -59,3 +59,11 @@
 (pushnew! initial-frame-alist
           '(width . 100)
           '(height . 40))
+
+;; Unbind M-. in haskell-mode so that doom and lsp can do their thing.
+;;
+;; It will fall back to the global `M-.` keybind, which doom remaps to
+;; +lookup/definition
+(map! :after haskell-mode
+      :map interactive-haskell-mode-map
+      "M-." nil)
