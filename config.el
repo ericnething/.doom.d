@@ -67,3 +67,11 @@
 (map! :after haskell-mode
       :map interactive-haskell-mode-map
       "M-." nil)
+
+;; (setq-hook! 'fsharp-mode-hook lsp-ui-doc-enable nil)
+
+;; (setq lsp-ui-doc-enable nil)
+(setq lsp-signature-auto-activate nil)
+
+;; Fix broken right-alt key on macos
+(setq ns-right-alternate-modifier 'left)
